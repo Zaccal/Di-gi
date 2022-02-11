@@ -1,0 +1,378 @@
+@import 'vars.scss';
+@import 'fonts.scss';
+
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+// null start
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: 'Roboto-regular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'RobotoCondensed-regular', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button{
+    padding: 0;
+}
+
+// null end
+// container start
+
+.container{
+    padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+    .container{
+        padding: 0 30px;
+    }   
+}
+
+@media (min-width: 768px) {
+    .container{
+        padding: 0 40px;
+    }   
+}
+
+@media (min-width: 1024px) {
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }   
+}
+
+@media (min-width: 1440px) {
+    .container{
+        max-width: 1320px;
+    }   
+}
+
+// container end
+// header start
+
+.header{
+    background-color: $acent;
+    &__inner{
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 640px) {
+    .header{
+        &__inner{
+            min-height: 100px;
+        }
+    }
+}
+
+.logo__link{
+    margin-left: 8px;
+}
+
+@media (min-width: 640px) {
+ .logo__link{
+     margin-left: 14px;
+ }   
+}
+
+@media (min-width: 768px) {
+    .logo__link{
+        margin-left: 0px;
+    }   
+   }
+
+.menu__btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 0;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        background-color: $acent;
+        border-radius: 1px;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $acent, 0 9px 0 0 $acent;
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu__btn{
+        margin-left: 90px;
+    }
+}
+
+// header end
+// hero content start
+// slider start
+
+.hero{
+    background: url(../img/bg.jpg) no-repeat center center, rgba(33, 33, 33, 0.5);
+    background-size: cover;
+    min-height: 193px;
+}
+
+@media (min-width: 640px) {
+    .hero{
+        min-height: 386px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero{
+        min-height: 465px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero{
+        min-height: 618px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero{
+        min-height: 668px;
+    }
+}
+
+.top-slider{
+    &__item{
+        color: #fff;
+        text-align: center;
+    }
+    &__title{
+        line-height: 28px;
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 36px 0 28px;
+        width: 243px;
+        margin: 0 auto;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            width: 61px;
+            height: 8px;
+            background-color: $text-color;
+        }
+    }
+}
+
+// slick css start
+
+.slick-dots{
+    margin: 30px auto;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    & li{
+        list-style: none;
+        font-size: 0;
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: $acent;
+            border-radius: 50%;
+            border: 0;
+        }
+        &.slick-active button{
+            border: 1px solid #476E4D;
+            background: inherit;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .slick-dots{
+        position: absolute;
+        bottom: 38px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+        margin-top: 53px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slick-dots{
+        bottom: 75px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .slick-dots{
+        bottom: 78px;
+        & li {
+            button {
+                background-color: #fff;
+            }
+            &.slick-active button{
+                border: 1px solid #fff;
+                background: inherit;
+            }
+        }
+    }
+}
+
+.slick-arrow{
+    position: absolute;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    z-index: 5;
+    cursor: pointer;
+    &_next{
+        bottom: calc(50% - 56px);
+        background-color: #F9F6E5;
+    }
+    &_prev{
+        top: calc(50% - 56px);
+        background-color: $acent;
+    }
+}
+
+@media (min-width: 640px) {
+    .top-slider{
+        &__item{
+            min-height: 386px;
+        }
+        &__title{
+            font-size: 60px;
+            line-height: 60px;
+            padding: 50px 0 20px;
+            margin: 0 auto 30px;
+            width: 520px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .top-slider{
+        &__item{
+            min-height: 465px;
+        }
+        &__title{
+            padding: 87px 0 33px;
+            margin-bottom: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .top-slider{
+        &__item{
+            min-height: 618px;
+        }
+        &__title{
+            font-size: 84px;
+            line-height: 84px;
+            letter-spacing: 2px;
+            padding: 123px 0 37px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .top-slider{
+        &__item{
+            min-height: 668px;
+        }
+        &__title{
+            font-size: 96px;
+            line-height: 96px;
+            width: 580px;
+            padding: 120px 0 26px;
+        }
+    }      
+}
+
+// slick css end
+
+.top-slider__btn{
+    border-radius: 3px;
+    background-color: $acent;
+    border: 0;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: none;
+    &:hover{
+        background-color: #4C70C9;
+    }
+}
+
+@media (min-width: 640px) {
+    .top-slider__btn{
+        display: inline-block;
+    }
+}
+
+.top-slider__subtitle{
+    width: 587px;
+    margin: 0 auto 32px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .top-slider__subtitle{
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .top-slider__subtitle{
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .top-slider__subtitle{
+        width: 886px;
+        margin-bottom: 28px;
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+// TODO: delete line over title 
+// and make the subtitle
