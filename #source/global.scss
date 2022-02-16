@@ -1,0 +1,56 @@
+@import 'vars.scss';
+@import 'fonts.scss';
+
+// null start
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: 'Roboto-regular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: $default-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'RobotoCondensed-regular', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button{
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $acent;
+    transition: 0.3s;
+    &:hover{
+        color: $hover;
+    }
+}
+
+// null end
+
+.title{ 
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed-regular", Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-bottom: 28px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 8px;
+        background-color: $acent;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+}
