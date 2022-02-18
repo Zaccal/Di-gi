@@ -320,7 +320,7 @@ html{
     cursor: pointer;
     display: none;
     &:hover{
-        background-color: #4C70C9;
+        background-color: $hover;
     }
 }
 
@@ -512,7 +512,7 @@ html{
         margin-bottom: 40px;
     }
     &__item{
-        min-height: 210px;
+        min-height: 310px;
         border: 1px solid $e-color;
         border-bottom: none;
         display: flex;
@@ -561,6 +561,163 @@ html{
         font-family: "RobotoCondensed-bold", Arial, Helvetica, sans-serif;
         font-weight: bold;
         text-transform: uppercase;
+    }
+}
+
+@media (min-width: 640px) {
+    .service{
+        padding: 24px 0 0;
+        &__title{
+            margin-bottom: 20px;
+            &::after{
+                display: none;
+            }
+        }
+        &__descr{
+            line-height: 24px;
+            font-size: 24px;
+            margin-bottom: 38px;
+            position: relative;
+            padding-bottom: 38px;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 8px;
+                background-color: $acent;
+                bottom: 0;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+            }
+        }
+        &__text{
+            line-height: 24px;
+            font-size: 18px;
+        }
+        &__items{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -30px;
+        }
+        &__item{
+            width: 50%;
+            &:nth-child(even){
+                border-left: none;
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .service{
+        padding: 50px 0 0;
+        &__title{
+            margin-bottom: 30px;
+            padding-bottom: 0;
+        }
+        &__descr{
+            text-align: left;
+            &::after{
+                margin-left: 0;
+            }
+        }
+        &__text{
+            margin-bottom: 27px;
+            text-align: left;
+        }
+        &__items{
+            margin: 0 -40px;
+        }
+        &__item{
+            padding: 0 65px;  
+            min-height: 334px;
+            &:hover{
+                padding: 0 18px;
+                .service__item-inner{
+                    margin: 18px;
+                    padding: 35px 64px 5px;
+                    min-height: 288px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .service{
+        padding: 52px 0 0;
+        &__title{
+            margin-bottom: 60px;
+            padding-bottom: 0;
+        }
+        &__descr{
+            padding-bottom: 46px;
+            margin-bottom: 40px;
+        }
+        &__text{
+            margin-bottom: 32px;
+            max-width: 608px;
+        }
+        &__item{
+            width: 25%;
+            padding: 0 17px;  
+            min-height: 277px;
+            &:nth-child(2),
+            &:nth-child(6){
+                border-right: none;
+            }
+            &:hover{
+                padding: 0 17px;
+                .service__item-inner{
+                    margin: 10px 0;
+                    padding: 21px 9px 5px;
+                    min-height: 255px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .service{
+        padding: 0;
+        &__inner{
+            margin: 0 -100px 0 -33px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__head{
+           min-width: 350px;
+           margin-right: 100px; 
+        }
+        &__title{
+            text-align: left;
+            margin: 90px 0 70px;
+        }
+        &__descr{
+            padding-bottom: 38px;
+            margin-bottom: 35px;
+        }
+        &__items{
+            margin: 0;
+        }
+        &__item{
+            width: 230px;
+            padding: 0 5px;  
+            min-height: 273px;
+            &:hover{
+                padding: 0 5px;
+                .service__item-inner{
+                    margin: 5px 0;
+                    padding: 10px 3px 5px;
+                    min-height: 255px;
+                }
+            }
+        }
     }
 }
 
