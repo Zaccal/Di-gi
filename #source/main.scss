@@ -713,7 +713,7 @@ html{
                 padding: 0 5px;
                 .service__item-inner{
                     margin: 5px 0;
-                    padding: 10px 3px 5px;
+                    padding: 20px 3px 5px;
                     min-height: 255px;
                 }
             }
@@ -732,6 +732,20 @@ html{
     &__title{
         color: #fff;
         text-align: center;
+        position: relative;
+        margin-bottom: 41px;
+        padding-bottom: 28px;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+            background-color: #fff;
+            height: 8px;
+            width: 50px;
+        }
     }
     &__subtitle{
         color: $acent;
@@ -767,6 +781,9 @@ html{
         &__title{
             font-size: 48px;
             line-height: 56px;
+            &::after{
+                width: 100px;
+            }
         }
         &__subtitle{
             font-size: 20px;
@@ -827,11 +844,6 @@ html{
     }
 }
 
-.line_project-position{
-    background-color: #fff;
-    margin: 20px auto 40px;
-}
-
 @media (min-width: 1024px) {
     .line_project-position{
         margin-bottom: 80px;
@@ -845,3 +857,129 @@ html{
 }
 
 // section porjects end
+// section team start
+
+.team{
+    padding: 0 0 40px;
+    text-align: center;
+    &__img{
+        width: 100%;
+        margin: 17px 0 40px;
+    }
+    &__title{
+        font-family: "RobotoCondensed-regular", Arial, Helvetica, sans-serif;
+        line-height: 38px;
+        font-size: 24px;
+        color: $text-color;
+        margin-bottom: 23px;
+    }
+    &__subtitle{
+        padding: 0 17px;
+        margin-bottom: 42px;
+        margin-top: 0;
+    }
+    &__btn-content{
+        display: none;
+    }
+    &__btn-center{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 640px) {
+    .team{
+        padding: 40px 0;
+        &__img{
+            margin: 0 0 40px;
+        }
+        &__title{
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        &__subtitle{
+            margin-bottom: 56px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team{
+        &__inner{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__img{
+            width: 240px;
+            height: 227px;
+            margin: 0 34px 0 0;
+        }
+        &__content{
+            text-align: left;
+            min-width: 407px;
+        }
+        &__title{
+            font-size: 36px;
+            margin-bottom: 7px;
+            &::after{
+                margin: 0;
+            }
+        }
+        &__subtitle{
+            padding: 0;
+            margin-bottom: 42px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .team{
+        padding: 80px 0;
+        &__img{
+            width: 395px;
+            height: 380px;
+        }
+        &__content{
+            min-width: 523px;
+        }
+        &__title{
+            font-size: 48px;
+            line-height: 56px;
+            padding-bottom: 23px;
+            margin-bottom: 19px;
+        }
+        &__subtitle{
+            line-height: 24px;
+            margin-bottom: 19px;
+        }
+        &__btn-content{
+            display: block;
+        }
+        &__btn-center{
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .team{
+        padding: 50px 0;
+        &__img{
+            width: 470px;
+            height: 430px;
+        }
+        &__content{
+            min-width: 584px;
+        }
+        &__title{
+            padding-bottom: 38px;
+            margin-bottom: 39px;
+        }
+        &__subtitle{
+            margin-bottom: 39px;
+        }
+    }
+}
+
+// section team end
